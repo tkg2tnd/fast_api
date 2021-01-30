@@ -4,13 +4,16 @@ from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+
 @app.get('/')
 async def hello():
     return {"text": "hello FastAPI"}
 
+
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):
     return {"item_id": item_id}
+
 
 @app.get("/users/me")
 async def read_user_me():

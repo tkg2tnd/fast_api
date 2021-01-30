@@ -8,13 +8,16 @@ users = {
   "user3": {"name": "user3", "email": "user3@example.com", "age": 40},
 }
 
+
 @router.get("/users/", tags=["users"])
 async def get_users():
     return {"users": users}
 
+
 @router.get("/users/me", tags=["users"])
 async def get_user_me():
     return {"name": "the current user"}
+
 
 @router.get("/users/{user_id}", tags=["users"])
 async def get_user(user_id: str):

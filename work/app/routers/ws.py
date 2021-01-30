@@ -6,6 +6,7 @@ app = FastAPI()
 # 接続中のクライアントを識別するためのIDを格納
 clients = {}
 
+
 # WebSockets用のエンドポイント
 @app.websocket("/ws")
 async def websocket_endpoint(ws: WebSocket):

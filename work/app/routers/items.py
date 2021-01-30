@@ -8,9 +8,11 @@ items = {
     "baz": {"name": "Baz", "description": None, "price": 50.2, "tax": 10.5, "tags": []},
 }
 
+
 @router.get("/")
 async def get_items():
     return {"items": items}
+
 
 @router.get("/{item_id}")
 async def get_item(item_id: str):
