@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: .
+    image: python3.9
+    volumes:
+      - ./work:/work
+    ports:
+      - "8100:8100"
+      - "8101:8101"
+    tty: true
+    environment:
+      PYTHONPATH: /var/lib/data_lab/src
