@@ -11,3 +11,9 @@ services:
     tty: true
     environment:
       PYTHONPATH: /var/lib/data_lab/src
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./data/redis:/data"
