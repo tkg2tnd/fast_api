@@ -8,7 +8,8 @@ pip install -r requests.txt
 
 ## サーバの起動
 ```
-uvicorn intro:app --reload
+/workspace/backend/app
+uvicorn app.main:app --reload
 ```
 
 ## 参考
